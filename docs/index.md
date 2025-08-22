@@ -7,6 +7,7 @@ Esta es una **plantilla** basada en [MkDocs](https://www.mkdocs.org/) + [Materia
 
 ![Diagrama del sistema](recursos/imgs/ibero.jpeg)
 
+![Diagrama del sistema](recursos/imgs/OIP.webp)
 
 ## Empezar rápido (3 pasos)
 
