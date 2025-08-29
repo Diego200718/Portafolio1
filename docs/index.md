@@ -14,6 +14,8 @@ Algunos de los logros que he tenido han sido realizar una tesina destacada sobre
 Correo: 204334@iberopuebla.mx
 Número Celular: 2211338061
 
+
+
 #Pedro Emmanuel Garcia Elvira
 
 Soy pedro, actualmente estudiante de ingeniería mecatrónica, soy de Veracruz, viví muchos años en mexico y posteriormente en acapulco, tengo 17 años, me gusta cocinar, dibujar y leer.
