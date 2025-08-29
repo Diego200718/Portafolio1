@@ -1,13 +1,6 @@
-# Documentación del Proyecto de Diego
+# Documentación del Proyecto de Diego y Pedro
 
-Bienvenido 👋  
-Esta es una **plantilla** basada en [MkDocs](https://www.mkdocs.org/) + [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) para cursos y proyectos.
-
----
-
-![Diagrama del sistema](recursos/imgs/ibero.jpeg)
-
-![Diagrama del sistema](recursos/imgs/OIP.webp)
+#Diego
 
 #Pedro Emmanuel Garcia Elvira
 
