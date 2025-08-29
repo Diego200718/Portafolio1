@@ -4,7 +4,7 @@
 
 Me llamo Diego y soy un estudiante de ingeniería mecatrónica de primer semestre, actualmente tengo 18 años y nací en puebla donde he vivido toda mi vida, me gustan los deportes y pasar tiempo con mis amigos.
 
-(IMAGEN)
+<img width="404" height="453" alt="Captura de pantalla 2024-09-27 195821" src="https://github.com/user-attachments/assets/2a3fcf6c-b28c-4915-9900-a823a6d359e2" />
 
 ## Logros Destacables
 
