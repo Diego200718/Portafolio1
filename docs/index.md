@@ -21,6 +21,10 @@ Clasifique como apto en el examen de conocimientos para la Escuela Naval y despu
 
 Jefe de grupo por un año completo en mi anterior escuela.
 
+###Contacto
+Correo: pedroemmanuel.garcia@iberopuebla.mx
+Chat: 205389@iberopuebla.mx
+
 ## Empezar rápido (3 pasos)
 
 1. **Edita el nombre del sitio** en `mkdocs.yml`:
