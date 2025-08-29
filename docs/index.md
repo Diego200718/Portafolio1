@@ -1,6 +1,18 @@
 # Documentación del Proyecto de Diego y Pedro
 
-#Diego
+#Diego Barriga Gómez
+
+Me llamo Diego y soy un estudiante de ingeniería mecatrónica de primer semestre, actualmente tengo 18 años y nací en puebla donde he vivido toda mi vida, me gustan los deportes y pasar tiempo con mis amigos.
+
+(IMAGEN)
+
+## Logros Destacables
+
+Algunos de los logros que he tenido han sido realizar una tesina destacada sobre el consumo de alcohol en la comúnidad y sus problemas, ser merecedor de una beca por nivel académico para ingresasr a la IBERO Puebla.
+
+## Contacto
+Correo: 204334@iberopuebla.mx
+Número Celular: 2211338061
 
 #Pedro Emmanuel Garcia Elvira
 
