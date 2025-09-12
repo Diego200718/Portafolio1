@@ -1,74 +1,28 @@
-# 📚 Ejemplo de Documentación del Proyecto
+# Documentación del Primer Proyecto
 
-> Plantilla genérica para documentar proyectos académicos o de ingeniería.  
-> Copia y adapta las secciones según tu necesidad.
-
----
-
-## 1) Resumen
-
-- **Nombre del proyecto:** _Mi Proyecto_  
-- **Equipo / Autor(es):** _Nombre(s)_  
-- **Curso / Asignatura:** _Nombre del curso_  
-- **Fecha:** _DD/MM/AAAA_  
-- **Descripción breve:** _Una o dos líneas que expliquen qué hace y por qué._
-
-!!! tip "Consejo"
-    Mantén este resumen corto (máx. 5 líneas). Lo demás va en secciones específicas.
+> Circuito eléctrico de un LED parpadeando gracias a calculadora de capacitores y resistencias.
 
 ---
 
-## 2) Objetivos
+## 1) Introducción
 
-- **General:** _Qué se pretende lograr en términos amplios._
-- **Específicos:**
-  - _OE1…_
-  - _OE2…_
-  - _OE3…_
-
-## 3) Alcance y Exclusiones
-
-- **Incluye:** _Qué funcionalidades/entregables sí están en el proyecto._
-- **No incluye:** _Qué queda fuera para evitar malentendidos._
+- **Nombre del proyecto:** _Proyecto LED 1_  
+- **Equipo / Autor(es):** _Diego Barriga Gómez y Pedro Emmanuel García Elvira_  
+- **Curso / Asignatura:** _Introducción a la Mecatrónica_  
+- **Fecha:** _05/09/2025_  
+- **Descripción breve:** _Armar un circuito con un LED que prende entre 3 a 5 segundos y lo mismo para apagarse._
 
 ---
 
-## 4) Requisitos
+## 2) Lo que se usó
 
-**Software**
-- _SO compatible (Windows/Linux/macOS)_
-- _Python 3.x / Node 18+ / Arduino IDE / etc._
-- _Dependencias (p. ej., pip/requirements, npm packages)_
+**Herramientas**
+-_Se utilizaron como herramientas una calculadora de capacitores y resistencias_
 
-**Hardware (si aplica)**
-- _MCU / Sensores / Actuadores / Fuente de poder_
-- _Herramientas (multímetro, cautín, etc.)_
-
-**Conocimientos previos**
-- _Programación básica en X_
-- _Electrónica básica_
-- _Git/GitHub_
-
+**Materiales**
+- _Protoboard, Jumpers, LED, Capacitores, Resistencias, 555, Fuente de energía y Osciloscopio._
 ---
 
-## 5) Instalación
-
-```bash
-# 1) Clonar
-git clone https://github.com/<usuario>/<repo>.git
-cd <repo>
-
-# 2) (Opcional) Crear entorno virtual
-python -m venv .venv
-# macOS/Linux
-source .venv/bin/activate
-# Windows (PowerShell)
-.venv\Scripts\Activate.ps1
-
-# 3) Instalar dependencias (ejemplos)
-pip install -r requirements.txt
-# o, si es Node:
-npm install
-
+## 3) Video
 
 ```
