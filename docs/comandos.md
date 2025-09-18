@@ -1,16 +1,15 @@
-# Encabezados
+# Documentación, practicia 1
+En esta practica se trabajo con una compuerta 555, la cual permite activar o desactivar ciertas funciones con un plazo de tiempo que puede ser modificado por resistencias.
 
-``` codigo
-# Título H1
-## Título H2
-### Título H3
-```
+En la clase se solicito que un led, estuviera encendido por un intervalo entre 3 y 5 segundos, y que se quedara apagado de igual manera entre 3 y 5 segundos.
 
-# Título H1
-## Título H2
-### Título H3
+Nos pidieron usar capacitores, ya que la clase principalmente se trataba de los usos de los capacitores y sus funciones.
 
----
+##calculos de resistencia
+
+Se nos proporciono una calculadora, la cual funcionaba al ingresar el valor de 2 resistencias diferentes, una que controlaba el encendido y otra el apagado, y un capacitor.
+
+En el caso de nuestro equipo decidimos usar una resistencia de 1 kΩ y otra de 20 kΩ y el capacitor con una capacitancia de ___
 
 # Énfasis y código en línea
 
