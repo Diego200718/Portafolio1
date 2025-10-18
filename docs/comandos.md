@@ -1,19 +1,59 @@
 # Documentación, practicia 1
-En esta practica se trabajo con una compuerta 555, la cual permite activar o desactivar ciertas funciones con un plazo de tiempo que puede ser modificado por resistencias.
+# Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
+Autores
+## Garcia Elvira Pedro Emmanuel
+## Barriga Gómez Diego
+## Fecha: 5 de Septiembre del 2025
+Asignatura: Introducción a la Mecatronica
 
-En la clase se solicito que un led, estuviera encendido por un intervalo entre 3 y 5 segundos, y que se quedara apagado de igual manera entre 3 y 5 segundos.
+# Práctica con el Temporizador 555
 
-Nos pidieron usar capacitores, ya que la clase principalmente se trataba de los usos de los capacitores y sus funciones.
+## Introducción
+En esta práctica de la materia **"Introducción a la Mecatrónica"**, se trabajó con el **integrado 555**, un componente que permite **activar o desactivar funciones** dentro de un circuito durante un tiempo determinado.  
+Este intervalo puede modificarse ajustando los valores de las **resistencias** y **capacitores** empleados en el diseño.
 
-##calculos de resistencia
+---
 
-Se nos proporciono una calculadora, la cual funcionaba al ingresar el valor de 2 resistencias diferentes, una que controlaba el encendido y otra el apagado, con un capacitor.
+## Objetivo de la práctica
+El propósito fue lograr que un **LED** se encendiera durante un periodo de **3 a 5 segundos** y permaneciera **apagado** durante el mismo intervalo de tiempo.  
+De esta forma, se buscó comprender cómo el **555** puede controlar la frecuencia de parpadeo en función de los componentes conectados.
 
-La conexion de los pines a la protoboard tambien se daban en la calculadora, asi que se debia seguir el diagrama tal y como se mostraba.
+---
 
-En el caso de nuestro equipo decidimos usar una resistencia de 1 kΩ y otra de 20 kΩ y el capacitor con una capacitancia de 330 micro faradios.
+## Uso de capacitores
+Durante la clase se enfatizó en el uso de los **capacitores**, ya que el tema principal era analizar **sus funciones y aplicaciones** dentro de un circuito temporizador.  
+Los capacitores se utilizaron para almacenar y liberar energía, permitiendo modificar los tiempos de encendido y apagado del LED.
+
+---
+
+## Cálculos de resistencia
+Se nos proporcionó una **calculadora de componentes**, la cual permitía ingresar los valores de dos resistencias y un capacitor.  
+Una de las resistencias controlaba el **tiempo de encendido**, mientras que la otra regulaba el **tiempo de apagado** del LED.
+
+Además, la calculadora mostraba el **diagrama de conexión** de los pines del 555 hacia la **protoboard**, lo que facilitó seguir correctamente el esquema del circuito.
+
+---
+
+## Componentes utilizados
+En el caso de nuestro equipo, seleccionamos los siguientes valores:
+
+- **Resistencia 1:** 1 kΩ  
+- **Resistencia 2:** 20 kΩ  
+- **Capacitor:** 330 µF  
+
+Estos componentes permitieron obtener el comportamiento deseado del circuito, con un parpadeo del LED dentro del rango de **3 a 5 segundos** para cada ciclo.
+
+---
+
+## Conclusión
+Gracias a esta práctica comprendimos mejor cómo **las resistencias y los capacitores** influyen en el **tiempo de respuesta** de un circuito con el **temporizador 555**.  
+Además, reforzamos la habilidad para **interpretar y armar circuitos** basados en diagramas electrónicos.
+
 
 ![Diagrama del sistema](recursos/imgs/Practica 555.png)
+
+**Pagina**
+(https://www.digikey.com.mx/es/resources/conversion-calculators/conversion-calculator-555-timer?srsltid=AfmBOopExlAJ0hL2w6AKdoyEliUHPJePR_9zs5x8V6Y6rbOffRCSPgXM)
 
 # Énfasis y código en línea
 
