@@ -228,7 +228,9 @@ En el **Procedimiento 2**, se integró un **botón físico** como entrada digita
 Finalmente, en el **Procedimiento 3**, se implementó **comunicación inalámbrica vía Bluetooth** utilizando la librería `BluetoothSerial.h`, logrando controlar el LED de manera remota desde una aplicación móvil, lo que permitió explorar la integración de **sistemas embebidos con comunicaciones inalámbricas**.  
 
 En conjunto, estas prácticas consolidaron conocimientos en **configuración del ESP32**, **control de salidas digitales**, **gestión de entradas y condicionales**, así como en la **interfaz con dispositivos externos** mediante Bluetooth.
+
 ---
+
 # Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
 Autores
 ## Garcia Elvira Pedro Emmanuel
