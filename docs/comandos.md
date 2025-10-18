@@ -7,9 +7,13 @@ Nos pidieron usar capacitores, ya que la clase principalmente se trataba de los 
 
 ##calculos de resistencia
 
-Se nos proporciono una calculadora, la cual funcionaba al ingresar el valor de 2 resistencias diferentes, una que controlaba el encendido y otra el apagado, y un capacitor.
+Se nos proporciono una calculadora, la cual funcionaba al ingresar el valor de 2 resistencias diferentes, una que controlaba el encendido y otra el apagado, con un capacitor.
 
-En el caso de nuestro equipo decidimos usar una resistencia de 1 kΩ y otra de 20 kΩ y el capacitor con una capacitancia de ___
+La conexion de los pines a la protoboard tambien se daban en la calculadora, asi que se debia seguir el diagrama tal y como se mostraba.
+
+En el caso de nuestro equipo decidimos usar una resistencia de 1 kΩ y otra de 20 kΩ y el capacitor con una capacitancia de 330 micro faradios.
+
+![Diagrama del sistema](recursos/imgs/Practica 555.png)
 
 # Énfasis y código en línea
 
