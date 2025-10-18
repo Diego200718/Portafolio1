@@ -1,4 +1,4 @@
-# Documentación, practicia 1
+# Documentación, Practicas
 # Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
 Autores
 ## Garcia Elvira Pedro Emmanuel
@@ -55,6 +55,10 @@ Además, reforzamos la habilidad para **interpretar y armar circuitos** basados 
 **Pagina**
 (https://www.digikey.com.mx/es/resources/conversion-calculators/conversion-calculator-555-timer?srsltid=AfmBOopExlAJ0hL2w6AKdoyEliUHPJePR_9zs5x8V6Y6rbOffRCSPgXM)
 
+---
+---
+---
+
 # Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
 Autores
 ## Garcia Elvira Pedro Emmanuel
@@ -94,6 +98,8 @@ En esta segunda practica de la asignatura **"Introducción a la Mecatrónica"**,
 4. **Programación:** Se desarrolló un **script en lenguaje C/C++**, el cual controla el encendido y apagado del LED utilizando la función `delay()` para generar intervalos de tiempo visibles entre ambos estados.  
 5. **Ejecución y verificación:** Finalmente, se cargó el programa al ESP32 y se comprobó su correcto funcionamiento, verificando que el LED alternara su estado de encendido y apagado de acuerdo con el código implementado.
 
+### Codigo
+
 ```cpp
 const int led = 33; // Puerto del ESP32 al que está conectado el LED
 
@@ -110,9 +116,120 @@ void loop() {  // Repetición constante del encendido y apagado
 }
 ```
 ---
+# Procedimiento 2
+Partiendo del código y circuito desarrollados en la primera práctica, se realizaron **modificaciones tanto en el hardware como en el software**.  
+
+En esta ocasión, se añadió un **botón pulsador** al circuito con el propósito de **controlar manualmente el encendido y apagado del LED** al presionarlo.  
+El botón se conectó al **pin 34 del ESP32**, configurado como **entrada digital**.  
+
+Para implementar esta nueva funcionalidad, se declaró una **nueva constante** en el código correspondiente al pin del botón, y se agregaron **estructuras condicionales** que permiten determinar el estado del LED en función de la lectura del pulsador:  
+- Cuando el botón es presionado, el **LED se enciende**.  
+- Cuando el botón no está presionado, el **LED permanece apagado**.  
+
+Estas modificaciones permitieron ampliar el control del sistema, pasando de un funcionamiento automático a uno **interactivo**, donde la acción del usuario influye directamente en el comportamiento del circuito.
+
+```
+const int led=33; // LED
+
+const int btn=34; // BOTON
+
+void setup() {
+
+  Serial.begin(115200);
+
+  pinMode(led, OUTPUT); // SALIDA
+
+  pinMode(btn, INPUT); // ENTRADA
+
+
+}
+
+void loop() {
+
+  int estado = digitalRead(btn); 
+
+  if(estado == 1){
+
+     digitalWrite(led,1);  // PRENDIDO
+  }
+
+  else {
+
+    digitalWrite(led,0); // APAGADO
+
+  }
+
+}
+```
+
+# Procedimiento 3
+Para este tercer ejercicio se utilizó la aplicación **"Serial Bluetooth Terminal"**, la cual permite **comunicarse con el ESP32 vía Bluetooth**. Mediante la terminal de la aplicación, se pueden enviar señales al microcontrolador para **controlar el encendido y apagado del LED** de acuerdo con el código programado.  
+
+Partiendo del **código desarrollado en el Procedimiento 2**, se realizaron las siguientes modificaciones:  
+
+1. Se añadió la librería **`#include "BluetoothSerial.h"`** para habilitar la comunicación Bluetooth en el ESP32.  
+2. Se eliminó la constante y configuración del botón físico, reemplazando la entrada por la **conexión Bluetooth**, que se denominó **LR23** en el código.  
+3. Las estructuras condicionales fueron adaptadas para funcionar con la aplicación:  
+   - Si la terminal envía el mensaje `"Prende"`, el **LED se enciende**.  
+   - Si se recibe cualquier otro mensaje, el **LED permanece apagado o se apaga**.  
+
+Estas modificaciones permitieron controlar el LED de manera **remota mediante Bluetooth**, demostrando cómo integrar comunicaciones inalámbricas con sistemas embebidos.
+
+```
+"#"include "BluetoothSerial.h"
+
+BluetoothSerial SerialBT;
+
+const int led=33;
+
+
+void setup() {
+
+  Serial.begin(115200);
+
+  SerialBT.begin("LR23"); // Dipositivo bluetooth
+
+  pinMode(led, OUTPUT);
+
+}
+
+void loop() {
+
+  if(SerialBT.available()){
+
+    String mensaje = SerialBT.readString();
+
+    Serial.println("Recibido: " + mensaje);
+
+    if(mensaje == "Prende"){
+
+     digitalWrite(led,1);
+
+    }
+
+    else {
+
+      digitalWrite(led,0);
+    }
+
+  }
+
+  delay(100);
+
+ }
+```
 
 # Conclusión
-La práctica permitió comprender de manera más profunda la interacción entre **hardware y software** en sistemas embebidos, destacando la importancia del **control temporal** mediante programación. Asimismo, se reforzaron los conocimientos sobre la **estructura del ESP32**, su configuración básica y su aplicación en el **control de salidas digitales**.
+La práctica permitió fortalecer la comprensión sobre la interacción entre **hardware y software** en sistemas embebidos, aplicando distintos métodos de control de un **LED** utilizando el **ESP32**.  
+
+En el **Procedimiento 1**, se desarrolló un circuito básico con encendido y apagado automático mediante retardos temporales, lo que reforzó la comprensión del **control temporal** en programación.  
+
+En el **Procedimiento 2**, se integró un **botón físico** como entrada digital, permitiendo el control manual del LED mediante estructuras condicionales, lo que amplió la experiencia en **interacción hardware-software** y en la gestión de entradas digitales.  
+
+Finalmente, en el **Procedimiento 3**, se implementó **comunicación inalámbrica vía Bluetooth** utilizando la librería `BluetoothSerial.h`, logrando controlar el LED de manera remota desde una aplicación móvil, lo que permitió explorar la integración de **sistemas embebidos con comunicaciones inalámbricas**.  
+
+En conjunto, estas prácticas consolidaron conocimientos en **configuración del ESP32**, **control de salidas digitales**, **gestión de entradas y condicionales**, así como en la **interfaz con dispositivos externos** mediante Bluetooth.
+
 
 
 
