@@ -55,8 +55,7 @@ Además, reforzamos la habilidad para **interpretar y armar circuitos** basados 
 **Pagina**
 (https://www.digikey.com.mx/es/resources/conversion-calculators/conversion-calculator-555-timer?srsltid=AfmBOopExlAJ0hL2w6AKdoyEliUHPJePR_9zs5x8V6Y6rbOffRCSPgXM)
 
----
----
+
 ---
 
 # Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
@@ -128,7 +127,7 @@ Para implementar esta nueva funcionalidad, se declaró una **nueva constante** e
 
 Estas modificaciones permitieron ampliar el control del sistema, pasando de un funcionamiento automático a uno **interactivo**, donde la acción del usuario influye directamente en el comportamiento del circuito.
 
-```
+```cpp
 const int led=33; // LED
 
 const int btn=34; // BOTON
@@ -175,7 +174,7 @@ Partiendo del **código desarrollado en el Procedimiento 2**, se realizaron las 
 
 Estas modificaciones permitieron controlar el LED de manera **remota mediante Bluetooth**, demostrando cómo integrar comunicaciones inalámbricas con sistemas embebidos.
 
-```
+```cpp
 "#"include "BluetoothSerial.h"
 
 BluetoothSerial SerialBT;
@@ -229,219 +228,120 @@ En el **Procedimiento 2**, se integró un **botón físico** como entrada digita
 Finalmente, en el **Procedimiento 3**, se implementó **comunicación inalámbrica vía Bluetooth** utilizando la librería `BluetoothSerial.h`, logrando controlar el LED de manera remota desde una aplicación móvil, lo que permitió explorar la integración de **sistemas embebidos con comunicaciones inalámbricas**.  
 
 En conjunto, estas prácticas consolidaron conocimientos en **configuración del ESP32**, **control de salidas digitales**, **gestión de entradas y condicionales**, así como en la **interfaz con dispositivos externos** mediante Bluetooth.
+---
+# Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
+Autores
+## Garcia Elvira Pedro Emmanuel
+## Barriga Gómez Diego
+## Fecha: 19 de Septiembre del 2025
 
-
-
-
-[Enlace directo](https://www.iberopuebla.mx/)
-
-[Texto del enlace de referencia][doc-ref]
-
-[doc-ref]: https://www.iberopuebla.mx//docs "Título opcional"
-```
-
-[Enlace directo](https://www.iberopuebla.mx/)
-
-[Texto del enlace de referencia][doc-ref]
-
-[doc-ref]: https://www.iberopuebla.mx//docs "Título opcional"
+# Descripción
+En esta tercer practica de la materia **Introducción a la Mecatrónica**, nuestro objetivo fue realizar la **conexión y programación de un motor DC** para controlar su **encendido, apagado y velocidad** utilizando un **ESP32**.  
+Se emplearon los **pines digitales** y la función `ledcWrite()` para variar la velocidad del motor mediante la técnica de **modulación por ancho de pulso (PWM)**.
 
 ---
 
-# Listas: viñetas, numeradas y de tareas
+# Objetivos
 
-``` codigo
+## General
+Aprender a controlar un **motor DC** utilizando un **microcontrolador**, comprendiendo el funcionamiento de los **pines de salida** y el control de velocidad mediante **PWM**.
 
-- Item A
-    * Subitem A.1
-    * Subitem A.2
-- Item B
-    - Subitem B.1
-    - Subitem B.2
-
-1.  Paso 1
-    1.  Paso 1.1
-    2.  Paso 1.2
-        1.  Paso 1.2.1
-        2.  Paso 1.2.2
-        
-- [x] Hecho
-- [ ] Pendiente
-
-```
-
-- Item A
-    * Subitem A.1
-    * Subitem A.2
-- Item B
-    - Subitem B.1
-    - Subitem B.2
+## Específicos
+- Programar el **encendido y cambio de giro** del motor.  
+- Implementar el **control de velocidad** utilizando la función `ledcWrite()`.  
+- Comprender la relación entre **frecuencia, ciclo de trabajo y velocidad del motor**.
 
 ---
 
-1.  Paso 1
-    1.  Paso 1.1
-    2.  Paso 1.2
-        1.  Paso 1.2.1
-        2.  Paso 1.2.2
-        
-- [x] Hecho
-- [ ] Pendiente
+# Alcance y Exclusiones
+
+- **Incluye:**  
+  - Conexión del **motor DC** a través del driver y pines de salida del **ESP32**.  
+  - Código para **encendido, apagado y cambio de giro** del motor.  
+  - Código con **control progresivo de velocidad** mediante PWM.  
+
+- **No incluye:**  
+  - Otros tipos de motores o controladores distintos al motor DC y driver utilizados.  
 
 ---
 
-# Tablas
+# Procedimiento
+1. Se identificaron los **pines de salida** del microcontrolador y se realizaron las **conexiones correspondientes** del motor DC mediante el driver.  
+2. Una vez conectado, se desarrolló un **código básico** que permitiera:  
+   - Encender el motor en una dirección.  
+   - Detenerlo después de un intervalo de 3 segundos.  
+   - Cambiar su giro en sentido contrario, manteniendo los mismos intervalos de tiempo.  
 
-``` codigo
-| Componente | Cant. | Nota        |
-|-----------:|:-----:|-------------|
-| Sensor X   | 2     | I2C         |
-| MCU Y      | 1     | WiFi/BLE    |
+Este procedimiento permitió **verificar la correcta integración de hardware y software** para controlar el motor DC y sentar las bases para implementar control de velocidad posteriormente.
+---
+Anexando a continuación el **primer código** utilizado :
+---
+```cpp
+#define in1 32
+#define in2 33
+
+void setup() {
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(in1,1);
+  digitalWrite(in2,0);
+  delay(3000);
+  digitalWrite(in1,0);
+  digitalWrite(in2,0);
+  delay(3000);
+  digitalWrite(in1,0);
+  digitalWrite(in2,1);
+  delay(3000);
+}
 ```
+---
+# Control Progresivo de Velocidad del Motor
 
-| Componente | Cant. | Nota        |
-|-----------:|:-----:|-------------|
-| Sensor X   | 2     | I2C         |
-| MCU Y      | 1     | WiFi/BLE    |
+Como segunda parte de este proyecto, y tomando como base lo realizado previamente, se programó el **motor DC** de manera que fuera posible **controlar su velocidad de forma gradual**.  
+El objetivo fue que el motor **aumentara y disminuyera progresivamente su velocidad**, en lugar de detenerse o arrancar de manera abrupta.  
+
+Esto es importante porque, aplicado a un motor real, un arranque o paro repentino podría generar **pérdida de control** o incluso un **desgaste innecesario** en el mecanismo.
 
 ---
 
-# Imágenes
+A continuación, se presenta el **segundo código** utilizado para implementar esta funcionalidad en el proyecto:
 
-``` codigo
-![Diagrama del sistema](recursos/imgs/ibero.jpeg)
+```cpp
+pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  //Control de velocidad
+  ledcAttachChannel(pwm,1000,8,0); //pin,frecuencia,bits,canal   //config
 
-<!-- Control de tamaño usando HTML (cuando se requiera) -->
-<img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
+}
+
+void loop() {
+  for(vel=0; vel<=256;vel++){
+  ledcWrite(pwm,vel);
+  digitalWrite(in1,1);
+  digitalWrite(in2,0);
+  delay(10);
+  }
+  for(vel=256;vel>=0;vel--){
+  digitalWrite(in1,1);
+  digitalWrite(in2,0);
+  delay(10);
+  }
+}
 ```
 
-![Diagrama del sistema](recursos/imgs/ibero.jpeg)
+# Conclusión
 
-<img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
+La practica 3 permitió profundizar en el **control de motores DC** mediante un **ESP32**, combinando tanto la parte de encendido/apagado y cambio de giro, como el control progresivo de velocidad.  
 
----
+En la primera fase, se logró comprender la relación entre los **pines digitales**, la lógica de control y la implementación de **intervalos temporales** para encender y apagar el motor de manera controlada.  
 
-# PDFs (enlace y embebido)
+En la segunda fase, se incorporó el **control gradual de velocidad** mediante la técnica de **modulación por ancho de pulso (PWM)** utilizando la función `ledcWrite()`. Esto permitió **evitar arranques y paros bruscos**, lo cual es fundamental para proteger el motor y el mecanismo acoplado, además de ofrecer un comportamiento más realista y seguro del sistema.  
 
-``` codigo
-[Descargar especificación (PDF)](recursos/archivos/Calendario.pdf)
-
-<!-- Embed (requiere navegador compatible) -->
-<object data="recursos/archivos/Calendario.pdf" type="application/pdf" width="100%" height="600">
-  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Calendario.pdf">Descargar</a></p>
-</object>
-```
-
-[Descargar especificación (PDF)](recursos/archivos/Calendario.pdf)
-
-<object data="../recursos/archivos/Calendario.pdf" type="application/pdf" width="100%" height="600">
-  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Calendario.pdf">Descargar</a></p>
-</object>
-
----
-
-# Admonitions (Material)
-
-``` codigo
-!!! note "Nota"
-    Esto es una nota informativa.
-
-!!! tip "Sugerencia"
-    Un consejo breve para el usuario.
-
-!!! warning "Advertencia"
-    Precauciones o riesgos a considerar.
-
-??? info "Más información (colapsable)"
-    Contenido adicional que se puede expandir.
-```
-
-!!! note "Nota"
-    Esto es una nota informativa.
-
-!!! tip "Sugerencia"
-    Un consejo breve para el usuario.
-
-!!! warning "Advertencia"
-    Precauciones o riesgos a considerar.
-
-??? info "Más información (colapsable)"
-    Contenido adicional que se puede expandir.
-
----
-
-# Código con resaltado
-
-``` codigo
-```python
-def medir(canal: int) -> dict:
-    # Simulación de lectura
-    return {"canal": canal, "valor": 523, "unidad": "mV"}
-
-print(medir(1))
-```
-```
-
-```python
-def medir(canal: int) -> dict:
-    # Simulación de lectura
-    return {"canal": canal, "valor": 523, "unidad": "mV"}
-
-print(medir(1))
-```
-
----
-
-# Separador horizontal
-
-``` codigo
----
-```
-
----
-
----
-
-# Listas anidadas con código y notas
-
-``` codigo
-- **Módulo A**
-  - Función: `procesar()`
-  - Entrada:
-    - `signal` (float)
-    - `freq` (Hz)
-  - Salida:
-    - JSON con `valor`, `unidad`
-  - !!! note
-        Documenta rangos válidos y casos borde.
-```
-
-- **Módulo A**
-  - Función: `procesar()`
-  - Entrada:
-    - `signal` (float)
-    - `freq` (Hz)
-  - Salida:
-    - JSON con `valor`, `unidad`
-  - !!! note
-        Documenta rangos válidos y casos borde.
-
----
-
-# Bloques de cita con código (pseudo-logs)
-
-``` codigo
-> **Log:**
-> ```
-> [12:00:00] Init OK
-> [12:00:01] Conectando a I2C...
-> [12:00:02] Lectura: 523 mV
-> ```
-```
-
-> **Log:**
-> ```
-> [12:00:00] Init OK
-> [12:00:01] Conectando a I2C...
-> [12:00:02] Lectura: 523 mV
-> ```
+En conjunto, el proyecto consolidó conocimientos sobre:  
+- Programación de microcontroladores para control de actuadores.  
+- Uso de **PWM** para control de velocidad de motores.  
+- Integración de **hardware y software** para aplicaciones de mecatrónica.  
+- Importancia de implementar estrategias de control progresivo para proteger los componentes y mejorar la eficiencia del sistema.
