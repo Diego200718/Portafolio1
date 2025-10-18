@@ -55,31 +55,67 @@ Además, reforzamos la habilidad para **interpretar y armar circuitos** basados 
 **Pagina**
 (https://www.digikey.com.mx/es/resources/conversion-calculators/conversion-calculator-555-timer?srsltid=AfmBOopExlAJ0hL2w6AKdoyEliUHPJePR_9zs5x8V6Y6rbOffRCSPgXM)
 
-# Énfasis y código en línea
+# Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
+Autores
+## Garcia Elvira Pedro Emmanuel
+## Barriga Gómez Diego
+## Fecha: 12 de Septiembre del 2025
 
-``` codigo
-**negritas**, *cursivas*, ~~tachado~~, `código en línea`
-```
-
-**negritas**, *cursivas*, ~~tachado~~, `código en línea`
-
----
-
-# Citas (blockquote)
-
-``` codigo
-> Esta es una cita destacada.
-> Puede tener múltiples líneas.
-```
-
-> Esta es una cita destacada.
-> Puede tener múltiples líneas.
+# Descripción
+En esta práctica se trabajó con diversos **componentes electrónicos** —entre ellos el **ESP32**, **jumpers** y una **protoboard**— con el objetivo de implementar un circuito capaz de **encender y apagar un diodo LED** mediante la **programación del microcontrolador ESP32** desde un entorno computacional.
 
 ---
 
-# Enlaces
+# Objetivos
 
-``` codigo
+## General
+En esta segunda practica de la asignatura **"Introducción a la Mecatrónica"**, se buscó diseñar e implementar un circuito controlado por un **ESP32**, programado para **activar y desactivar un LED** de acuerdo con las instrucciones definidas en el código desarrollado durante la sesión.
+
+## Específicos
+- **Objetivo 1:** Superar el desempeño obtenido en la primera practica, consolidando los conocimientos adquiridos y aplicándolos de manera más eficiente.  
+- **Objetivo 2:** Profundizar en la comprensión del funcionamiento del **ESP32**, así como en la lógica de control digital mediante programación estructurada.  
+- **Objetivo 3:** Fortalecer las habilidades en el **ensamblaje de circuitos electrónicos** y la **implementación de retardos temporales (delay)** dentro de un programa.
+
+---
+
+# Alcance y Exclusiones
+
+- **Incluye:**  
+  - Los **códigos fuente** empleados para la ejecución de cada circuito.  
+  - **Evidencias fotográficas** de las conexiones realizadas en la protoboard.  
+
+
+---
+
+# Procedimiento 1
+1. **Revisión de materiales:** Se verificó la disponibilidad y correcto funcionamiento de los componentes electrónicos requeridos para la práctica.  
+2. **Configuración inicial:** Se realizó una breve introducción al uso del **microcontrolador ESP32**, abordando su conexión con la computadora y su programación mediante un entorno de desarrollo compatible.  
+3. **Diseño del circuito:** Se implementó un circuito básico en la **protoboard**, conectando un **LED** a uno de los **pines digitales de salida** del ESP32, junto con la resistencia correspondiente para limitar la corriente.  
+4. **Programación:** Se desarrolló un **script en lenguaje C/C++**, el cual controla el encendido y apagado del LED utilizando la función `delay()` para generar intervalos de tiempo visibles entre ambos estados.  
+5. **Ejecución y verificación:** Finalmente, se cargó el programa al ESP32 y se comprobó su correcto funcionamiento, verificando que el LED alternara su estado de encendido y apagado de acuerdo con el código implementado.
+
+```cpp
+const int led = 33; // Puerto del ESP32 al que está conectado el LED
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {  // Repetición constante del encendido y apagado
+  digitalWrite(led, 1); // Encendido
+  delay(1000);          // Retraso del encendido y apagado del LED
+  digitalWrite(led, 0); // Apagado
+  delay(1000);
+}
+```
+---
+
+# Conclusión
+La práctica permitió comprender de manera más profunda la interacción entre **hardware y software** en sistemas embebidos, destacando la importancia del **control temporal** mediante programación. Asimismo, se reforzaron los conocimientos sobre la **estructura del ESP32**, su configuración básica y su aplicación en el **control de salidas digitales**.
+
+
+
 [Enlace directo](https://www.iberopuebla.mx/)
 
 [Texto del enlace de referencia][doc-ref]
