@@ -354,3 +354,5 @@ En conjunto, el proyecto consolidó conocimientos sobre:
 - Uso de **PWM** para control de velocidad de motores.  
 - Integración de **hardware y software** para aplicaciones de mecatrónica.  
 - Importancia de implementar estrategias de control progresivo para proteger los componentes y mejorar la eficiencia del sistema.
+
+- ![Diagrama del sistema](recursos/imgs/Captura de pantalla 2025-10-19 193459)
