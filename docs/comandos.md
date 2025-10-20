@@ -234,6 +234,8 @@ Finalmente, en el **Procedimiento 3**, se implementó **comunicación inalámbri
 
 En conjunto, estas prácticas consolidaron conocimientos en **configuración del ESP32**, **control de salidas digitales**, **gestión de entradas y condicionales**, así como en la **interfaz con dispositivos externos** mediante Bluetooth.
 
+![Diagrama del sistema](recursos/imgs/esp.jpg)
+
 ---
 
 # Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
