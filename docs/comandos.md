@@ -63,7 +63,7 @@ Además, reforzamos la habilidad para **interpretar y armar circuitos** basados 
 
 ---
 
-# Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
+# Nombre de la practica: Funcionamiento y uso del microcontrolador ESP32
 Autores
 ## Garcia Elvira Pedro Emmanuel
 ## Barriga Gómez Diego
@@ -238,7 +238,7 @@ En conjunto, estas prácticas consolidaron conocimientos en **configuración del
 
 ---
 
-# Nombre de la practica: Funcionamiento y uso de la compuerta 74ls555
+# Nombre de la practica: Uso de motor PWM con microcontrolador ESP32
 Autores
 ## Garcia Elvira Pedro Emmanuel
 ## Barriga Gómez Diego
