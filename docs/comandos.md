@@ -49,6 +49,11 @@ Estos componentes permitieron obtener el comportamiento deseado del circuito, co
 Gracias a esta práctica comprendimos mejor cómo **las resistencias y los capacitores** influyen en el **tiempo de respuesta** de un circuito con el **temporizador 555**.  
 Además, reforzamos la habilidad para **interpretar y armar circuitos** basados en diagramas electrónicos.
 
+![Diagrama del sistema](recursos/imgs/555.jpg)
+
+![Diagrama del sistema](recursos/imgs/Osciloscopio.jpeg)
+
+![Diagrama del sistema](recursos/imgs/555.1jpg)
 
 ![Diagrama del sistema](recursos/imgs/Practica 555.png)
 
