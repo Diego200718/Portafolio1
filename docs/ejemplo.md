@@ -19,7 +19,15 @@
 - _PLA para impresión 3D, ESP32, Jumpers, Pilas de 3.7V, Portapilas, Servomotores_
 ---
 
-## 3) Código
+## 3) Procedimiento
+
+**Diseño**
+- _El prototipo fue diseñado basándose en imágenes de proyectos similares en internet para entender el funcionamiento de la mecánica.
+- _Después se comenzó el diseño para imprimirse algunas piezas en 3D mientras que algunas bases y soportes se hicieron en corte laser con mdf_
+- _Se imprimió lo que se debía imprimir en 3D y también se cortó en laser y aunque hubo problemas con las medidas se volvió a imprimir y cortar para lograr el soporte que se buscaba_
+---
+
+## 4) Programación
 Python
 -_import cv2
 import numpy as np
@@ -188,4 +196,12 @@ void loop() {
   //EY =  -H/2 -> H/2 = -240 a 240
   delay(20);
 }
+Este código decodifica las señales mandadas por la cámara para transformarlas en movimientos de los Servomotores y lograr el movimiento que se desea
 
+
+## 5) Resultados
+
+**Resultado**
+-_Funcionó parcialmente ya que a pesar de que el código y el funcionamiento de los servomotores fue correcto, el motor no aguantó completamente el peso de la base por lo que no se movia de manera satisfactoria por lo que la pelota al momento de moverla con cierta fuerza, la plataforma dejaba de lograr el movimiento completo y no la mantenía en equilibrio._
+-_A pesar de que tuvo esos errores, si el diseño y distribución de peso hubiera sido mejor controlado hubiera funcionado perfectamente._
+---
